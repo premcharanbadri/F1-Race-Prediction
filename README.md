@@ -1,6 +1,6 @@
 # Predicting Formula 1 Race Outcomes (2022-2025)
 
-A data science project applying predictive modeling to Formula 1 race strategy, built to answer a practical question for race teams and strategists: which factors actually drive race results, and which ones are noise.
+An Analytics project applying predictive modeling to Formula 1 race strategy, built to answer a practical question for race teams and strategists: which factors actually drive race results, and which ones are noise.
 
 ## Business Problem
 
