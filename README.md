@@ -18,6 +18,7 @@ Give race strategists and analysts a data-backed ranking of which levers, qualif
 
 <kbd> <img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/d269bf37-9fb9-4fe2-b5c8-07e1369483eb" /> </kbd>
 
+               Absolute Feature Importance Plots for All Three Models
 
 **Pit stop discipline correlates strongly with strong finishes.** Drivers who finished on the podium pitted once, on average, compared to two stops for non-podium finishers. This supports continued investment in pit crew execution and strategy software that favors fewer, well-timed stops over reactive multi-stop strategies.
 
@@ -28,7 +29,9 @@ Give race strategists and analysts a data-backed ranking of which levers, qualif
 <kbd><img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/d765a167-ed10-4bbf-a99e-51d2cc7e31a6" />
 </kbd>
 
-*The model's value also shows up in ranking, not just classification. Looking only at the top 10% of predicted podium probabilities, drivers in that group are about six times more likely to actually finish on the podium than an average driver in the dataset. This means the model can be used to prioritize attention on a small number of high-probability candidates each race weekend rather than treating every entry as equally uncertain.*
+*Here, Lift at 10% = 5.95 means that if we only looked at the top 10% of model predictions, drivers are about 6 times more likely to get a podium than the average driver in the dataset.*
+
+The model's value also shows up in ranking, not just classification. Looking only at the top 10% of predicted podium probabilities, drivers in that group are about six times more likely to actually finish on the podium than an average driver in the dataset. This means the model can be used to prioritize attention on a small number of high-probability candidates each race weekend rather than treating every entry as equally uncertain.
 
 ## How This Supports Decisions
 
@@ -55,9 +58,16 @@ I built a driver-level dataset combining official race data (grid position, qual
 
 <kbd><img width="700" height="550" alt="image" src="https://github.com/user-attachments/assets/1f80f03f-5655-4b46-b120-3c2665b8363b" /></kbd>
 
+
+* ***Precision = 58.7%. It is important to mention that the optimal threshold is approximately 32.5%. At this level, when the model predicts a podium, it is correct more than half of the time.***
+
+* ***Recall = 87.1%. The model successfully identifies nearly 90% of real podiums, a strong result given that podiums are rare events.***
+
+
 <kbd><img width="700" height="600" alt="image" src="https://github.com/user-attachments/assets/535179eb-83e4-4466-a7e1-559881fe68e9" />
 </kbd>
 
+* *A ROC-AUC of 0.939 indicates the model can correctly rank podium vs. non-podium cases more than 93.9% of the time.*
 
 ## Data Sources and Tools
 
